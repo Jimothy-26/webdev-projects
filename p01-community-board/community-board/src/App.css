@@ -1,0 +1,87 @@
+/* styles the page layout, the grid, and the cards */
+
+/* styles the main app container. */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+/* centers the app and sets a baby-blue background. */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: aliceblue; /* baby blue */
+}
+
+/* colors the main heading and the subtitle blue and gray */
+h1 { color: navy; } /* navy */
+h2 { color: darkslategray; } /* dark gray-blue */
+
+/* creates a responsive grid that fits as many columns as the width allows. */
+.grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 16px;
+}
+
+/* styles the card container. */
+.Card {
+  background: white; /* white */
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 24px lightgray; /* light gray shadow */
+}
+
+/* lays out the text and button inside the card. */
+.card-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* styles the title. */
+.card-title {
+  margin: 0;
+  text-align: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: midnightblue; /* dark blue */
+}
+
+/* styles the category line. */
+.card-category {
+  margin: 0;
+  text-align: center;
+  color: slategray; /* gray-blue */
+  font-weight: 600;
+}
+
+/* styles the button with blue. */
+.card-button {
+  align-self: center;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background: navy; /* navy */
+  color: white; /* white */
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 6px lightgray; /* light gray */
+}
+
+/* lightens the button on hover. */
+.card-button:hover {
+  background: blue; /* blue */
+}
