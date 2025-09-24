@@ -22,9 +22,9 @@ The following **optional** features are implemented:
 
 - [x] Buttons or links to a related resources are on each card component
 - [x] All cards have buttons or links in addition to text
-- [ ] The site is responsive for both desktop and mobile formats
-- [ ] Web app is shown in a mobile format
-- [ ] **Video Walkthrough Special Instructions**: To ease the grading process, please use Chrome Developer Tools' "Toggle Device" button to demonstrate that your web application's responsiveness in both a desktop *and* a mobile format. Detailed instructions can be found below this stretch feature on the project page. 
+- [x] The site is responsive for both desktop and mobile formats
+- [x] Web app is shown in a mobile format
+- [x] **Video Walkthrough Special Instructions**: To ease the grading process, please use Chrome Developer Tools' "Toggle Device" button to demonstrate that your web application's responsiveness in both a desktop *and* a mobile format. Detailed instructions can be found below this stretch feature on the project page. 
 
 The following **additional** features are implemented:
 
@@ -34,10 +34,10 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./p01-community-board-animation.gif' title='Community Board Walkthrough' width='' alt='Community Board Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ...  ScreenToGif
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
@@ -47,7 +47,7 @@ GIF created with ...
 
 Describe any challenges encountered while building the app.
 
-While building the app, I had issues setting up my React project as I was still new to using Vite. I also had to reinstall node.js and learn how to create a new project through VS Code and Folders. I also had a hard time working on creating the cards as I was learning how to format the grids.
+While building the app, I had issues setting up my React project as I was still new to using Vite. I also had to reinstall node.js and revist how to create a new project through VS Code and Folders. I also had a hard time working on creating the cards as I was learning how to format the grids.
 
 ## License
 
