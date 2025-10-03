@@ -41,7 +41,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='C:\Users\jimmy\webdev-projects\p02-flashcards\p02-flashcards-animation.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='./p02-flashcards-animation.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ... ScreentoGif
@@ -52,7 +52,8 @@ GIF created with ... ScreentoGif
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Describe any challenges encountered while building the app. 
+While working on this app, my biggest challenge was getting started as I wanted to mirror the example given in terms of its layout. I had to do alot of research and tampering to work out what containers influenced the flip as well as the allignment. 
 
 ## License
 
