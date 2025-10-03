@@ -8,21 +8,21 @@ body {
   background: royalblue; /*blue*/
 }
 
-/*Rootcontainerlayout*/
+/*Root container layout*/
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
 }
 
-/*Apptextcenter*/
+/*App text center*/
 .App { text-align: center; }
 
-/*Whiteheadingsonblue*/
+/*White headings on blue*/
 .header h1 { color: white; margin: 0 0 8px 0; }
 .header h2 { color: white; font-weight: 500; margin: 0; }
 
-/*Cardstagecenter*/
+/*Card center*/
 .stage {
   display: flex;
   justify-content: center;
@@ -31,7 +31,7 @@ body {
   margin-top: 16px;
 }
 
-/*Controlsrowcenter*/
+/*Controls row center*/
 .controls {
   margin-top: 16px;
   display: flex;
@@ -39,7 +39,7 @@ body {
   justify-content: center;
 }
 
-/*Whitebuttonblacktext*/
+/*White button w/ black text*/
 .arrow-btn {
   padding: 10px 16px;
   border-radius: 10px;
@@ -51,57 +51,57 @@ body {
 }
 .arrow-btn:hover { background: whitesmoke; }
 
-/*Flipcontainerwithperspective*/
+/*Flip container w/ perspective*/
 .flip-card {
   width: 360px;
   height: 220px;
   perspective: 1000px; /*3Ddepth*/
 }
 
-/*Rotatinginnerpanel*/
+/*Rotating inner panel*/
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform 0.9s ease; /*slowerspin*/
+  transition: transform 0.9s ease;
   transform-origin: center center;
   cursor: pointer;
 }
 
-/*Applyflipstate*/
+/*Apply flip state*/
 .flip-card.flipped .flip-card-inner {
-  transform: rotateX(180deg); /*verticalflip*/
+  transform: rotateX(180deg); /*vertical flip*/
 }
 
 /*Facepanelsfullsize*/
 .flip-card-front,
 .flip-card-back {
   position: absolute;
-  inset: 0;                /*top/right/bottom/left:0*/
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
 
-  /*Makeeachfaceacard*/
-  background: white;       /*whitecard*/
-  color: black;            /*readabletext*/
-  border: 3px solid black; /*blackoutline*/
-  border-radius: 12px;     /*roundedcorners*/
-  box-shadow: 0 10px 24px rgba(0,0,0,0.15); /*softshadow*/
+  /*Make each face a card*/
+  background: white;       
+  color: black;           
+  border: 3px solid black; 
+  border-radius: 12px;     
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15); 
 
-  /*Hidebackfaceproperly*/
+  /*Hide back face properly*/
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
 
-/*Backfacesetforflip*/
+/*Back face set for flip*/
 .flip-card-back {
   transform: rotateX(180deg);
 }
 
-/*Cardtextstyling*/
+/*Card text styling*/
 .flip-card-front p,
 .flip-card-back p {
   margin: 0;

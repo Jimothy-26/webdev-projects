@@ -2,7 +2,7 @@
 const Flashcard = ({ front, back, isFlipped, onFlip }) => {
   return (
     <div className={`flip-card ${isFlipped ? 'flipped' : ''}`}>
-      {/* The inner panel rotates when .flipped is present on the parent */}
+      {/*The inner panel rotates when .flipped is present on the parent*/}
       <div className="flip-card-inner" onClick={onFlip}>
         <div className="flip-card-front">
           <p>{front}</p>
