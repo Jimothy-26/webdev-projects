@@ -1,42 +1,110 @@
+/*Full-pagebluebg*/
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  background: royalblue; /*blue*/
+}
+
+/*Rootcontainerlayout*/
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/*Apptextcenter*/
+.App { text-align: center; }
+
+/*Whiteheadingsonblue*/
+.header h1 { color: white; margin: 0 0 8px 0; }
+.header h2 { color: white; font-weight: 500; margin: 0; }
+
+/*Cardstagecenter*/
+.stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 260px;
+  margin-top: 16px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Controlsrowcenter*/
+.controls {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/*Whitebuttonblacktext*/
+.arrow-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background: white;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+.arrow-btn:hover { background: whitesmoke; }
+
+/*Flipcontainerwithperspective*/
+.flip-card {
+  width: 360px;
+  height: 220px;
+  perspective: 1000px; /*3Ddepth*/
 }
 
-.card {
-  padding: 2em;
+/*Rotatinginnerpanel*/
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease; /*slowerspin*/
+  transform-origin: center center;
+  cursor: pointer;
 }
 
-.read-the-docs {
-  color: #888;
+/*Applyflipstate*/
+.flip-card.flipped .flip-card-inner {
+  transform: rotateX(180deg); /*verticalflip*/
+}
+
+/*Facepanelsfullsize*/
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;                /*top/right/bottom/left:0*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  /*Makeeachfaceacard*/
+  background: white;       /*whitecard*/
+  color: black;            /*readabletext*/
+  border: 3px solid black; /*blackoutline*/
+  border-radius: 12px;     /*roundedcorners*/
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15); /*softshadow*/
+
+  /*Hidebackfaceproperly*/
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/*Backfacesetforflip*/
+.flip-card-back {
+  transform: rotateX(180deg);
+}
+
+/*Cardtextstyling*/
+.flip-card-front p,
+.flip-card-back p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
