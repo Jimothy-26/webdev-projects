@@ -1,0 +1,202 @@
+/*Full page is a blue background*/
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  background: navy;
+}
+
+/*Root container layout*/
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/*App text center*/
+.App { text-align: center; }
+
+/*White headings on blue*/
+.header h1 { color: white; margin: 0 0 8px 0; }
+.header h2 { color: white; font-weight: 500; margin: 0; }
+
+/*Streak and meta row*/
+.meta {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+}
+
+/*Card center*/
+.stage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 260px;
+  margin-top: 16px;
+}
+
+/*Controls row center*/
+.controls {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/*White button w/ black text*/
+.arrow-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background: white;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+.arrow-btn:hover { background: whitesmoke; }
+
+/*Disabled button state*/
+.arrow-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #f5f5f5;
+  color: #777;
+  border-color: #bbb;
+}
+
+/*Flip container w/ perspective*/
+.flip-card {
+  width: 360px;
+  height: 220px;
+  perspective: 1000px;
+}
+
+/*Rotating inner panel*/
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease;
+  transform-origin: center center;
+  cursor: pointer;
+}
+
+/*Apply vertical flip state*/
+.flip-card.flipped .flip-card-inner {
+  transform: rotateX(180deg); 
+}
+
+/*Face panels full size*/
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  /*Make each face a card*/
+  background: white;       
+  color: black;           
+  border: 3px solid black; 
+  border-radius: 12px;     
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15); 
+
+  /*Hide back face properly*/
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/*Back face set for flip*/
+.flip-card-back {
+  transform: rotateX(180deg);
+}
+
+/*Card text styling*/
+.flip-card-front p,
+.flip-card-back p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/*Row holding label + input + button*/
+.guess-row {
+  margin-top: 16px;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Guess label*/
+.guess-label {
+  color: white;
+  font-weight: 700;
+}
+
+/*Base input*/
+.guess-input {
+  padding: 10px 12px;
+  min-width: 260px;
+  font-size: 1rem;
+  color: black;
+  background: white;
+  border-radius: 8px;
+  border: 2px solid black;
+  outline: none;
+}
+
+/*Green border when correct*/
+.guess-input.good {
+  border-color: green;
+  box-shadow: 0 0 0 3px rgba(0,128,0,0.15);
+}
+
+/*Red border when wrong*/
+.guess-input.bad {
+  border-color: red;
+  box-shadow: 0 0 0 3px rgba(255,0,0,0.15);
+}
+
+/*Submit button in black and white*/
+.submit-btn {
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 2px solid black;
+  background: white;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+}
+.submit-btn:hover { background: whitesmoke; }
+
+/*Container under input for the popup bubble*/
+.feedback {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  min-height: 28px;
+}
+
+/*Small popup bubble*/
+.bubble {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 800;
+  background: white;
+  border: 2px solid black;
+  color: black;
+}
+
+/*Tinted borders to match status*/
+.good-bubble { border-color: green; }
+.bad-bubble  { border-color: red;   }
