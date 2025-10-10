@@ -44,7 +44,9 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of the flashcards and the user experience: 
 
-<img src='' title='CA Permit Flashcard Plus' width='' alt='Gif Walkthrough' />
+<img src='./p03-flashcards-plus-animation.gif' title='CA Permit Flashcard Plus' width='' alt='Gif Walkthrough' />
+<img src='./p03-flashcards-plus-vscode-animation.gif' title='CA Permit Flashcard Plus VS Code' width='' alt='Gif Code Walkthrough' />
+
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  ScreentoGif
