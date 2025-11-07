@@ -1,0 +1,302 @@
+/* page background */
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #024dfd, #020617 55%);
+  display: flex;
+  justify-content: center;
+  font-family: "Times New Roman", "Times", serif;
+  color: white;
+}
+
+/* outer shell: sidebar and main content */
+.app-shell {
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+}
+
+/* glass panel look */
+.summary-card,
+.dashboard-panel.centered-panel,
+.sidebar,
+.chart-card,
+.detail-card {
+  background: rgba(15, 23, 42, 0.3);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+}
+
+/* left sidebar */
+.sidebar {
+  width: 220px;
+  padding: 32px 20px;
+  margin: 40px 0 40px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.sidebar-title {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar-item {
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.sidebar-item-active {
+  font-weight: bold;
+  color: #ffffff;
+  background: rgba(15, 23, 42, 0.7);
+}
+
+/* main container */
+.page.page-wide {
+  flex: 1;
+  margin: 40px 24px 40px 16px;
+  padding: 56px 24px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* header */
+.header-centered {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.title {
+  font-size: 25px;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* summary row */
+.summary-row.centered-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+/* single summary card */
+.summary-card {
+  padding: 14px 22px;
+  min-width: 190px;
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: lightgray;
+}
+
+.summary-value {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+/* dashboard panel */
+.dashboard-panel.centered-panel {
+  padding: 16px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.panel-title {
+  margin: 0;
+  font-size: 30px;
+}
+
+.panel-subtitle {
+  margin: 4px 0 14px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* controls (search + filter) */
+.controls {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.controls input,
+.controls select {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  background: rgba(15, 23, 42, 0.45);
+  color: #fff;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.controls input {
+  flex: 1 1 280px;
+}
+
+/* recipe list */
+.recipe-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* table-like rows */
+.recipe-header,
+.recipe-row {
+  display: grid;
+  grid-template-columns: 1.6fr 0.5fr 0.6fr 0.5fr;
+  gap: 8px;
+  align-items: center;
+}
+
+/* header row */
+.recipe-header {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* data row (link) */
+.recipe-row {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  border-radius: 12px;
+  padding: 7px 10px;
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* name + thumbnail */
+.recipe-name {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recipe-thumb {
+  width: 42px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* charts section */
+.charts-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.chart-card {
+  flex: 1 1 300px;
+  padding: 14px 18px;
+}
+
+.chart-card h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+/* detail page */
+.detail-page {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.back-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.detail-card {
+  padding: 18px 20px 20px;
+}
+
+.detail-image {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 10px 0 16px;
+}
+
+.detail-summary {
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+/* errors */
+.error {
+  color: #fca5a5;
+  font-size: 14px;
+}
+
+/* responsive tweaks */
+@media (max-width: 900px) {
+  .app-shell {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .sidebar {
+    width: auto;
+    margin: 24px 24px 0 24px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sidebar-nav {
+    flex-direction: row;
+  }
+
+  .page.page-wide {
+    margin: 24px 24px 40px 24px;
+    padding: 40px 16px 40px;
+  }
+}
+
+@media (max-width: 550px) {
+  .title {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .dashboard-panel.centered-panel {
+    padding: 14px;
+  }
+}
