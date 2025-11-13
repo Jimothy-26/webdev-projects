@@ -2,7 +2,7 @@
 
 Submitted by: **Jimmy Salvador--Contreras**
 
-This web app: **insert description**
+This web app: **allows the user to create their own crewmates with their own color, name, and speed. The user has the freedom to edit, view, or delete their crewmate.**
 
 Time spent: **7** hours spent in total
 
@@ -45,6 +45,7 @@ The following **additional** features are implemented:
 
 * [x] List anything else that you added to improve the site's functionality!
   - Added a grey/black background for better visuals 
+  - Added multiple links and buttons to allow the user to edit their crewmate
 
 ## Video Walkthrough
 
@@ -57,7 +58,7 @@ GIF created with ...  [ScreenToGif](https://www.screentogif.com/) for Windows
 ## Notes
 
 Describe any challenges encountered while building the app.
-I had a hard time organzing the user interface to resemble the example project while still being my own. I also had a hard time 
+I had a hard time organzing the user interface to resemble the example project while still being my own. I also had a hard time working on formatting each of the different pages while keeping it connected to the main page.
 ## License
 
     Copyright [2025] [JImmy Salvador-Contreras]
