@@ -14,8 +14,8 @@ function App() {
     <BrowserRouter>
       <div className="app">
         {/* Title at the top of the app */}
-        <h1 className="app-title">Your Crew</h1>
-        <p className="app-subtitle">Build the perfect team before sending them into space.</p>
+        <h1 className="app-title">Welcome to Crewmate Creator!</h1>
+        <p className="app-subtitle">Build the your own team before sending them into space!</p>
 
         <div className="app-layout">
           {/* Sidebar navigation to reach all required pages */}

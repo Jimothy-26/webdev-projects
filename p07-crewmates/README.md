@@ -50,7 +50,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='' title='P07-Crewmates Walkthrough' width='' alt='GIF Walkthrough' />
+<img src='/p07-crewmates/p07-crewmates-animation.gif' title='P07-Crewmates Walkthrough' width='' alt='GIF Walkthrough' />
 
 GIF created with ...  [ScreenToGif](https://www.screentogif.com/) for Windows
 
