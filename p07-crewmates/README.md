@@ -4,30 +4,30 @@ Submitted by: **Jimmy Salvador--Contreras**
 
 This web app: **insert description**
 
-Time spent: **X** hours spent in total
+Time spent: **7** hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
 
-- [ ] **The web app contains a page that features a create form to add a new crewmate**
+- [X] **The web app contains a page that features a create form to add a new crewmate**
   - Users can name the crewmate
   - Users can set the crewmate’s attributes by clicking on one of several values
-- [ ] **The web app includes a summary page of all the user’s added crewmatese**
+- [X] **The web app includes a summary page of all the user’s added crewmatese**
   -  The web app contains a summary page dedicated to displaying all the crewmates the user has made so far
   -  The summary page is sorted by creation date such that the most recently created crewmates appear at the top
-- [ ] **A previously created crewmate can be updated from the list of crewmates in the summary page**
+- [X] **A previously created crewmate can be updated from the list of crewmates in the summary page**
   - Each crewmate has an edit button that will take users to an update form for the relevant crewmate
   - Users can see the current attributes of their crewmate on the update form
   - After editing the crewmate's attribute values using the form, the user can immediately see those changes reflected in the update form and on the summary page 
-- [ ] **A previously created crewmate can be deleted from the crewmate list**
+- [X] **A previously created crewmate can be deleted from the crewmate list**
   - Using the edit form detailed in the previous _crewmates can be updated_ feature, there is a button that allows users to delete that crewmate
   - After deleting a crewmate, the crewmate should no longer be visible in the summary page
-  - [ ] **Each crewmate has a direct, unique URL link to an info page about them**
-    - Clicking on a crewmate in the summary page navigates to a detail page for that crewmate
-    - The detail page contains extra information about the crewmate not included in the summary page
-    - Users can navigate to to the edit form from the detail page
+- [X] **Each crewmate has a direct, unique URL link to an info page about them**
+  - Clicking on a crewmate in the summary page navigates to a detail page for that crewmate
+  - The detail page contains extra information about the crewmate not included in the summary page
+  - Users can navigate to to the edit form from the detail page
 
 The following **optional** features are implemented:
 
@@ -43,28 +43,24 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] List anything else that you added to improve the site's functionality!
+  - Added a grey/black background for better visuals 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='' title='P07-Crewmates Walkthrough' width='' alt='GIF Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+GIF created with ...  [ScreenToGif](https://www.screentogif.com/) for Windows
 
 ## Notes
 
 Describe any challenges encountered while building the app.
-
+I had a hard time organzing the user interface to resemble the example project while still being my own. I also had a hard time 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2025] [JImmy Salvador-Contreras]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

@@ -1,4 +1,3 @@
-// src/pages/EditCrewmate.jsx
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { supabase } from '../client';
@@ -9,11 +8,12 @@ export default function EditCrewmate() {
   const { id } = useParams();
   const navigate = useNavigate();
 
+  // track editable fields for the selected crewmate
   const [name, setName] = useState('');
   const [speed, setSpeed] = useState('');
   const [color, setColor] = useState(COLORS[0]);
 
-  // Load current values
+  // load the current attributes of the crewmate into the update form
   useEffect(() => {
     const fetchCrewmate = async () => {
       const { data, error } = await supabase
@@ -34,7 +34,7 @@ export default function EditCrewmate() {
     fetchCrewmate();
   }, [id]);
 
-  // UPDATE
+  // update the existing crewmate entry with edited attribute values
   const handleUpdate = async (event) => {
     event.preventDefault();
 
@@ -47,11 +47,11 @@ export default function EditCrewmate() {
       })
       .eq('id', id);
 
-    // you can send them to detail or gallery; detail feels nice
+    // after updating, show the changes on the detail page
     navigate(`/crewmate/${id}`);
   };
 
-  // DELETE
+  // delete the current crewmate from the database
   const handleDelete = async (event) => {
     event.preventDefault();
 
@@ -60,14 +60,16 @@ export default function EditCrewmate() {
       .delete()
       .eq('id', id);
 
+    // after deleting, the crewmate will no longer appear in the summary page
     navigate('/gallery');
   };
 
   return (
     <div className="page edit-page">
-      <h1>Update Your Crewmate :)</h1>
+      <h1>Update Your Crewmate :</h1>
       <p>Current Crewmate Info: Name: {name}, Speed: {speed}, Color: {color}</p>
 
+      {/* update form showing current attributes */}
       <form onSubmit={handleUpdate} className="crewmate-form">
         <div>
           <label>Name:</label>
@@ -104,6 +106,8 @@ export default function EditCrewmate() {
         </div>
 
         <button type="submit">Update Crewmate</button>
+
+        {/* delete button to remove the crewmate from the list */}
         <button
           type="button"
           className="delete-button"

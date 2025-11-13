@@ -1,4 +1,4 @@
-// src/pages/CrewmateDetail.jsx
+// fetches one crewmate by id and shows extra information
 import { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { supabase } from '../client';
@@ -7,6 +7,7 @@ export default function CrewmateDetail() {
   const { id } = useParams();
   const [crewmate, setCrewmate] = useState(null);
 
+  // read a single crewmate from the database using its id
   useEffect(() => {
     const fetchCrewmate = async () => {
       const { data, error } = await supabase
@@ -27,16 +28,6 @@ export default function CrewmateDetail() {
 
   if (!crewmate) return <div className="page">Loading...</div>;
 
-  // simple “extra info” based on speed
-  let message = '';
-  if (crewmate.speed < 2) {
-    message = 'You may want to find a Crewmate with more speed, this one is kind of slow 😬';
-  } else if (crewmate.speed < 5) {
-    message = 'Nice balanced Crewmate, not too fast, not too slow.';
-  } else {
-    message = 'Wow, this Crewmate is SUPER fast! 🚀';
-  }
-
   return (
     <div className="page detail-page">
       <h1>Crewmate: {crewmate.name}</h1>
@@ -45,9 +36,9 @@ export default function CrewmateDetail() {
       <p>Color: {crewmate.color}</p>
       <p>Speed: {crewmate.speed} mph</p>
 
-      {/* Extra info not shown in gallery */}
-      <p style={{ marginTop: '2rem' }}>{message}</p>
 
+
+      {/* user can navigate from detail page to the edit form */}
       <Link to={`/crewmate/${crewmate.id}/edit`} className="button">
         Wanna edit this Crewmate?
       </Link>

@@ -1,17 +1,18 @@
-// src/components/CrewmateCard.jsx
+// show each crewmate and provide links to the detail and edit pages.
+
 import { Link } from 'react-router-dom';
 
 export default function CrewmateCard({ crewmate }) {
   return (
     <div className={`crewmate-card ${crewmate.color.toLowerCase()}`}>
-      {/* Clicking card goes to detail page */}
+      {/* clicking on a crewmate in the summary page navigates to its info page */}
       <Link to={`/crewmate/${crewmate.id}`} className="card-body">
         <h2>{crewmate.name}</h2>
         <p>Speed: {crewmate.speed} mph</p>
         <p>Color: {crewmate.color}</p>
       </Link>
 
-      {/* Edit button */}
+      {/* edit button that goes to the update form */}
       <Link to={`/crewmate/${crewmate.id}/edit`} className="edit-button">
         Edit Crewmate
       </Link>

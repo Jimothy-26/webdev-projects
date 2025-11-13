@@ -1,42 +1,259 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+/* layout and typography */
+
+html {
+  font-size: 20px;
+  letter-spacing: 0.5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Root app container */
+.app {
+  width: 90%;
+  max-width: 1100px;
+  margin-top: 40px;
+}
+
+/* Title / header */
+
+.app-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin: 0 0 10px;
+  letter-spacing: 0.5px;
+  color: goldenrod;
+}
+
+.app-subtitle {
+  text-align: center;
+  font-size: 1.4rem;
+  color: lightgray;
+  margin: 0 0 24px;
+}
+
+/* main layout */
+
+.app-layout {
+  display: flex;
+  align-items: stretch;
+  gap: 20px;
+}
+
+/* Sidebar with Home, Create, and Gallery */
+.sidebar {
+  width: 220px;
+  background-color: #333333; 
+  border-radius: 12px;
+  padding: 16px 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.sidebar-title {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  color: #f0f0f0;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sidebar-nav li + li {
+  margin-top: 8px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.sidebar-link {
+  display: block;
+  background-color: #4a4a4a;
+  border-radius: 999px;
+  padding: 8px 12px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.card {
-  padding: 2em;
+.sidebar-link:hover {
+  background-color: #5b5b5b;
+  transform: translateX(2px);
 }
 
-.read-the-docs {
-  color: #888;
+/* Main content area */
+
+.main-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Gray container that sits in the middle of the screen */
+.page-panel {
+  width: 100%;
+  background-color: #1a3235;
+  color: white;
+  border-radius: 18px;
+  padding: 24px 28px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.8);
+  text-align: center;
+}
+
+/* Headings inside content */
+.page-panel h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.page-panel h2 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.page-panel p {
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Buttons & links */
+
+.button,
+button,
+input[type="submit"] {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  background-color: goldenrod;
+  color: black;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  cursor: pointer;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.button:hover,
+button:hover,
+input[type="submit"]:hover {
+  background-color: yellow;
+  transform: translateY(-1px);
+}
+
+/* Delete-style button */
+.delete-button {
+  background-color: darkred;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: red;
+}
+
+/* Forms */
+
+.crewmate-form {
+  margin-top: 18px;
+  text-align: left;
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.crewmate-form > div {
+  margin-bottom: 12px;
+}
+
+.crewmate-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.crewmate-form input[type="text"],
+.crewmate-form input[type="number"] {
+  width: 100%;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #888;
+  background-color: #111111;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.crewmate-form input[type="text"]:focus,
+.crewmate-form input[type="number"]:focus {
+  outline: none;
+  border-color: goldenrod;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+}
+
+/* Gallery grid & cards */
+
+.gallery-grid {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.crewmate-card {
+  background-color: #242424;
+  border-radius: 14px;
+  padding: 14px 16px;
+  text-align: left;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  border: 1px solid #444;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, border-color 0.1s ease;
+}
+
+.crewmate-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.8);
+  border-color: goldenrod;
+}
+
+.crewmate-card h2 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.crewmate-card p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+}
+
+/* Edit button inside card */
+.crewmate-card .edit-button {
+  margin-top: 8px;
+  font-size: 0.85rem;
+  padding: 4px 12px;
+}
+
+/* Detail page */
+.detail-extra {
+  margin-top: 18px;
+  font-size: 1rem;
 }
