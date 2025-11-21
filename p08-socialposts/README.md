@@ -78,7 +78,7 @@ GIF created with ...
 ## Notes
 
 Describe any challenges encountered while building the app.
-
+A chllange I had while working on my app was figuring out how to select and design the interface of my application. I had a hard time working out the look of the application so that it would stay consistent. 
 ## License
 
     Copyright [2025] [Jimmy Salvador-Contreras]
